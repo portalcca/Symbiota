@@ -46,7 +46,7 @@ header('Content-Type: text/html; charset=' . $CHARSET);
 			<div>
 				<h1>Welcome to the Central American Collections Portal</h1>
 				<p>
-					This platform is designed as a collaborative resource for the digitization and mobilization of biodiversity collections in the Central American region. Furthermore, the portal facilitates the use of interactive tools for generating maps, species lists, and identification keys. The information can also be published to the Global Biodiversity Information Facility (GBIF), from where it can be harvested by other local and international data aggregators. Data added to the portal is available for use by researchers, students, and the general public. Users are encouraged to properly cite the source. </p>
+					This platform is designed as a collaborative resource for the digitization and mobilization of biodiversity collections in the Central American region. Furthermore, the portal facilitates the use of interactive tools for generating maps, species lists, and identification keys. The information can also be published to the <a href="https://gbif.org"> Global Biodiversity Information Facility (GBIF) </a>, from where it can be harvested by other local and international data aggregators. Data added to the portal is available for use by researchers, students, and the general public. Users are encouraged to properly cite the source. </p>
 <p> For more information or to add a collection, please contact the portal administrators at portalcentroamerica@gmail.com.
 
 				</p>
