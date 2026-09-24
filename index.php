@@ -26,8 +26,9 @@ header('Content-Type: text/html; charset=' . $CHARSET);
 		if($LANG_TAG == 'es'){
 			?>
 			<div>
-				<h1 class="headline">Bienvenidos</h1>
-				<p>Este portal de datos se ha establecido para promover la colaboración... Reemplazar con texto introductorio en inglés</p>
+				<h1 class="headline">Bienvenidos al Portal de Colecciones de Centroamérica</h1>
+				<p>Esta plataforma está diseñada como un recurso colaborativo para la digitalización y movilización de colecciones de biodiversidad de la región Centroamericana. Además, el portal facilita el uso de herramientas interactivas para la generación de mapas, listados de especies y claves de identificación. La información también puede ser movilizada a la Instalación Global de Información de Biodiversidad -GBIF-, desde donde puede alimentar a otros agregadores de información locales e internacionales. Los datos añadidos al portal están disponibles para ser utilizados por investigadores, estudiantes y público en general, por lo que se insta a citar adecuadamente su origen. 			
+Para más información o integrar sus colecciones, pueden escribir a portalcentroamerica@gmail.com.</p>
 			</div>
 			<?php
 		}
