@@ -45,11 +45,11 @@ $collectionSearchPage = !empty($SHOULD_USE_HARVESTPARAMS) ? '/collections/index.
 			<div class="top-brand">
 				<a href="<?= $CLIENT_ROOT ?>">
 					<div class="image-container">
-						<img src="<?= $CLIENT_ROOT ?>/images/layout/logo_symbiota.png" alt="Symbiota logo">
+						<img src="<?= $CLIENT_ROOT ?>/images/layout/LogoMariposaPNG.png" alt="Logo Portal">
 					</div>
 				</a>
 				<div class="brand-name">
-					<h1>Colecciones de Centroamérica</h1>
+					<h1>Colecciones Centroamericanas de Biodiversidad</h1>
 				</div>
 			</div>
 		</div>
