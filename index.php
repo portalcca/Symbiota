@@ -14,6 +14,15 @@ header('Content-Type: text/html; charset=' . $CHARSET);
 	include_once($SERVER_ROOT . '/includes/head.php');
 	include_once($SERVER_ROOT . '/includes/googleanalytics.php');
 	?>
+		<link href="<?= $CSS_BASE_PATH ?>/jquery-ui.css" type="text/css" rel="stylesheet">
+	<link href="<?= $CSS_BASE_PATH; ?>/quicksearch.css" type="text/css" rel="Stylesheet" />
+	<script src="<?= $CLIENT_ROOT ?>/js/jquery-3.7.1.min.js" type="text/javascript"></script>
+	<script src="<?= $CLIENT_ROOT ?>/js/jquery-ui.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+			var clientRoot = "<?php echo $CLIENT_ROOT; ?>";
+	</script>
+	<script src="<?php echo $CLIENT_ROOT; ?>/js/symb/api.taxonomy.taxasuggest.js" type="text/javascript"></script>
+	<script src="<?php echo $CLIENT_ROOT; ?>/js/jquery.slides.js"></script>
 </head>
 <body>
 	<?php
@@ -22,28 +31,31 @@ header('Content-Type: text/html; charset=' . $CHARSET);
 	<div class="navpath"></div>
 	<main id="innertext">
 
-	<div>
-	<div id="quicksearchdiv" style="width:375px">
+
+	<div style="float:right;width:300px;margin-left:20px">
+	   <div id="quicksearchdiv" style="width:375px">
 					<!-- -------------------------QUICK SEARCH SETTINGS--------------------------------------- -->
 					<form name="quicksearch" id="quicksearch" action="<?php echo $CLIENT_ROOT; ?>/taxa/index.php" method="get" onsubmit="return verifyQuickSearch(this);">
 							<div id="quicksearchtext" ><?php echo (isset($LANG['QSEARCH_SEARCH'])?$LANG['QSEARCH_SEARCH']:'Search Taxon'); ?></div>
 							<input id="taxa" type="text" name="taxon" />
 							<button name="formsubmit"  id="quicksearchbutton" type="submit" value="Search Terms" ><?php echo (isset($LANG['QSEARCH_SEARCH_BUTTON'])?$LANG['QSEARCH_SEARCH_BUTTON']:'Search'); ?></button>
 					</form>
-				</div>
+	   </div>
+	</div>
 			
+						
 		<?php
 		if($LANG_TAG == 'es'){
 			?>
+			
 			<div>
-			<h1 class="headline">¡Bienvenidos!</h1>
-				
-				<p>Esta plataforma fue generada como parte del proyecto <a href="https://www.gbif.org/project/BID-REG2025-081/increasing-open-biodiversity-information-in-central-america-through-digitized-collections" target="_blank"><i>Incrementando la información abierta de biodiversidad en Centroamérica a través de colecciones digitalizadas</i></a>, del programa de <a href="https://www.gbif.org/news/4uU4o1vqXN95wBTnHS5ZTl/2025-bid-call-for-proposals-regional-and-cross-regional-biodiversity-data-mobilization-projects-closed" target="_blank">Información de Biodiversidad para el Desarrollo</a> de la Instalación Global de Información de Biodiversidad -GBIF- y la Unión Europea. </p>
+				<h1>¡Bienvenidos!</h1>
+							
+			<p>Esta plataforma fue generada como parte del proyecto <a href="https://www.gbif.org/project/BID-REG2025-081/increasing-open-biodiversity-information-in-central-america-through-digitized-collections" target="_blank"><i>Incrementando la información abierta de biodiversidad en Centroamérica a través de colecciones digitalizadas</i></a>, del programa de <a href="https://www.gbif.org/news/4uU4o1vqXN95wBTnHS5ZTl/2025-bid-call-for-proposals-regional-and-cross-regional-biodiversity-data-mobilization-projects-closed" target="_blank">Información de Biodiversidad para el Desarrollo</a> de la Instalación Global de Información de Biodiversidad -GBIF- y la Unión Europea. </p>
 				
 			<p>Diseñado para el uso de instituciones locales, este portal <a href="https://symbiota.org" target="_blank">Symbiota</a>, es un recurso colaborativo para la digitalización y movilización de colecciones de biodiversidad de la región centroamericana. Además, herramientas interactivas permiten la elaboración de mapas, listados de especies y claves de identificación, así como la movilización de información a <a href="https://gbif.org" target="_blank">GBIF</a>. </p> 
 				
 			<p> Para más información o integrar sus colecciones, pueden visitar nuestra <a href="https://portalcca.github.io" target="_blank">página de documentación</a> o contactar a los administradores en <a href="mailto:portalcentroamerica@gmail.com">portalcentroamerica@gmail.com</a>. </p>
-						
 			</div>
 			<?php
 		}
@@ -58,16 +70,30 @@ header('Content-Type: text/html; charset=' . $CHARSET);
 			<p>Designed for the use of local institutions, this <a href="https://symbiota.org" target="_blank">Symbiota-based</a> portal is a collaborative resource for the digitization and mobilization of biodiversity collections in the Central American region. Additionally, interactive tools allow the generation of maps, species checklists, taxonomic keys, and data mobilization to <a href="https://gbif.org" target="_blank">GBIF</a>. </p> 
 				
 			<p>For more information or incorporating your collections, please visit our <a href="https://portalcca.github.io" target="_blank">documentation site</a> or contact the portal admins at <a href="mailto:portalcentroamerica@gmail.com">portalcentroamerica@gmail.com</a>. </p>
+				
+			</p>
 			</div>
 			<?php
 		}
-		?>
-
+		?>		
+	
 		<div style="max-width:100%;text-align:center;margin:3rem;height:auto">
-			<img src="<?php echo $CLIENT_ROOT . '/images/layout/abejaBID.png' ?>" alt="Euglossa" style="max-width:100%"></img>
+			<img src="<?php echo $CLIENT_ROOT . '/images/layout/abejaBID.png' ?>" alt="Euglossa" style="max-width:85%"></img>
 			
 		</div>
-		
+<div style="max-width:100%;text-align:center;margin:3rem;height:auto">
+			<a href="https://cecon-ccqqfar.usac.edu.gt/" target="_blank"><img src="<?php echo $CLIENT_ROOT; ?>/images/layout/1_CECONLOGOmorado.png" style="height:75px; padding: 10px" /></a>
+			<a href="https://eb-ccqqfar.usac.edu.gt/" target="_blank"><img src="<?php echo $CLIENT_ROOT; ?>/images/layout/1_EBUSACLOGOmorado.png" style="height:68px; padding: 10px" /></a>
+			<a href="https://naturales.ues.edu.sv/biologia/" target="_blank"><img src="<?php echo $CLIENT_ROOT; ?>/images/layout/3_UESBIOLOGIAlogomorado.png" style="height:70px; padding: 10px" /></a>
+			<a href="https://www.ucr.ac.cr/" target="_blank"><img src="<?php echo $CLIENT_ROOT; ?>/images/layout/4_UCRLOGOmorado.png" style="height:70px; padding: 10px" /></a>
+			<a href="https://cibet.ucr.ac.cr/" target="_blank"><img src="<?php echo $CLIENT_ROOT; ?>/images/layout/4_CIBETlogomorado.png" style="height:70px; padding: 10px" /></a>
+			<a href="https://www.gbif.org/dataset/016548cd-4b5e-49cc-81b6-f2a4a09d5ba8" target="_blank"><img src="<?php echo $CLIENT_ROOT; ?>/images/layout/4_MIUCRlogomorado.png" style="height:70px; padding: 10px" /></a>
+			<a href="https://tropicalstudies.org/allaccesstrail/" target="_blank"><img src="<?php echo $CLIENT_ROOT; ?>/images/layout/5_OETlogomorado.png" style="height:68px; padding: 10px" /></a>
+			<a href="https://www.inab.gob.gt/" target="_blank"><img src="<?php echo $CLIENT_ROOT; ?>/images/layout/2_INABlogomorado.png" style="height:80px; padding: 10px" /></a>
+			<a href="https://conap.gob.gt/" target="_blank"><img src="<?php echo $CLIENT_ROOT; ?>/images/layout/6_ConapLogomo.png" style="height:70px; padding: 10px" /></a>
+			<a href="https://www.conagebio.go.cr/" target="_blank"><img src="<?php echo $CLIENT_ROOT; ?>/images/layout/7_CONAGEBIOmorado.png" style="height:70px; padding: 10px" /></a>
+			
+		</div>		
 	</main>
 	<?php if(!empty($GLOBALS['DONATE_LINK']) && file_exists($SERVER_ROOT . '/includes/donationButton.php')): ?>
 		<?php include($SERVER_ROOT . '/includes/donationButton.php') ?>
