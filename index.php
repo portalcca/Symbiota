@@ -31,16 +31,17 @@ header('Content-Type: text/html; charset=' . $CHARSET);
 	<div class="navpath"></div>
 	<main id="innertext">
 
+
 	<div style="float:right;width:300px;margin-left:20px">
-	<div id="quicksearchdiv" style="width:375px">
+	   <div id="quicksearchdiv" style="width:375px">
 					<!-- -------------------------QUICK SEARCH SETTINGS--------------------------------------- -->
 					<form name="quicksearch" id="quicksearch" action="<?php echo $CLIENT_ROOT; ?>/taxa/index.php" method="get" onsubmit="return verifyQuickSearch(this);">
 							<div id="quicksearchtext" ><?php echo (isset($LANG['QSEARCH_SEARCH'])?$LANG['QSEARCH_SEARCH']:'Search Taxon'); ?></div>
 							<input id="taxa" type="text" name="taxon" />
 							<button name="formsubmit"  id="quicksearchbutton" type="submit" value="Search Terms" ><?php echo (isset($LANG['QSEARCH_SEARCH_BUTTON'])?$LANG['QSEARCH_SEARCH_BUTTON']:'Search'); ?></button>
 					</form>
-				</div>
-				</div>
+	   </div>
+	</div>
 			
 						
 		<?php
@@ -74,8 +75,7 @@ header('Content-Type: text/html; charset=' . $CHARSET);
 			</div>
 			<?php
 		}
-		?>
-		
+		?>		
 	
 		<div style="max-width:100%;text-align:center;margin:3rem;height:auto">
 			<img src="<?php echo $CLIENT_ROOT . '/images/layout/abejaBID.png' ?>" alt="Euglossa" style="max-width:85%"></img>
